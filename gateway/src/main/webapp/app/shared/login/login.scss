@@ -1,0 +1,42 @@
+.login-title{
+    font-family: 'Work Sans', sans-serif;
+    text-transform: uppercase;
+    color: #b3b3b3;
+    font-weight:bold;
+}
+
+.logo{
+    width: 30%;
+    margin: 0 5px;
+}
+
+.login-line{
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    -webkit-flex-shrink: 1;
+    flex-shrink: 1;
+    background-color: #e84a34;
+    height: 2px;
+}
+
+.btn-brand{
+    background: rgb(232,115,52);
+    background: linear-gradient(90deg, rgba(232,115,52,1) 0%, rgba(232,74,52,1) 100%);
+    color: #fff;
+}
+
+.text-brand{
+    color: #e84a34 !important;
+}
+
+.form-bottom{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between ;
+    align-items: center;
+    margin: 20px 0;
+}
+
+a, a:hover {
+    font-weight: initial;
+}
