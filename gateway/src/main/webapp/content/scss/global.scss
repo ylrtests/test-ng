@@ -1,7 +1,8 @@
 @import 'bootstrap-variables';
 @import '~bootstrap/scss/functions';
 @import '~bootstrap/scss/variables';
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:900&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,900&display=swap');
 
 /* ==============================================================
 Bootstrap tweaks
@@ -58,7 +59,7 @@ Generic styles
 /* other generic styles */
 
 .jh-card {
-  padding: 0 1.5%;
+  // padding: 0 1.5%;
   margin-top: 20px;
   border: none;
 }
@@ -189,13 +190,16 @@ ui bootstrap tweaks
 
 .btn-brand{
   background: rgb(225,82,61);
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px #e1523d;
+  // border: 1px solid rgba(232,115,52,1);
   // background: linear-gradient(90deg, rgba(225,82,61,1) 0%, rgba(232,115,52,1) 100%);
-  color: #fff;
+  color: #fff !important;
   transition: all 0.3s ease 0s;
-  border-radius: 6px;
+  width: fit-content;
 }
 .btn-brand:hover{
-  color: #fff;
+  color: #fff !important;
   transform: scale(1.1);
   -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
   -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
@@ -204,4 +208,31 @@ ui bootstrap tweaks
 
 .text-brand{
   color: #e1523d !important;
+}
+
+.carousel-item {
+  transition: opacity 0.7s ease!important;
+  position: absolute!important;
+  display: block!important;
+  opacity: 0;
+}
+
+.carousel-item.active {
+  position: relative!important;
+  opacity: 1;
+}
+
+.fit-carousel{
+  height: 100%;
+  .carousel-inner{
+    height: 100% ;
+    .carousel-item{
+      height: 100%;
+      img {
+        height: 100%; 
+        width: 100%; 
+        object-fit: cover;
+      }
+    }
+  }
 }

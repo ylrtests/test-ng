@@ -1,32 +1,27 @@
 /* ==========================================================================
 Main page styles
 ========================================================================== */
+// Cambia color de fondo del: card y jh-card, contenedores de la plataforma.
+:host {
+  background: #808080;
+}
 
-.home{
+.home {
   height: calc(100vh - 45px);
   display: flex;
   flex-flow: column;
-  overflow-x: hidden;
+  max-width: 1115px;
+  margin: -20px auto 0;
+  background-color: #808080;
 }
-
-.gutter{
-  background-color: grey;
-  padding: 0 90px;
-   /* Fixed gap between navbar and hero component, and side bars.
-     If the gap is not needed anymore, it can be deleted.
-  */
-  margin-top: -20px;
-  margin-right: -35px;
-  margin-left: -35px;
-}
-
 
 .hero {
   position: relative;
   display: flex;
   flex-flow: row nowrap;
   width: 100%;
-  height: 380px;
+  height: 60vh;
+  max-height: 535px;
   border-bottom: 5px solid #fff;
 }
 
@@ -39,10 +34,11 @@ Main page styles
     position: relative;
     margin: 0.625rem 0 0 5%;
     h1 {
-      color: white;
+      color: #fff;
       text-transform: uppercase;
       text-shadow: 6px 5px 9px rgba(10, 10, 10, 0.77);
       font-size: 3.2rem;
+      font-weight: 900;
     }
     button {
       position: absolute;
@@ -53,22 +49,55 @@ Main page styles
   .map-container {
     height: 95%;
     margin-top: 0.625rem;
+    margin-right: 0.625rem;
   }
 }
 
-.home-bottom{
+.home-bottom {
   flex-grow: 1;
-  .bottom-panel{
+  max-height: 300px;
+
+  .bottom-panel {
     background-image: url("/content/images/home/home-bottom.jpg");
     background-size: cover;
     background-position: right;
-    width: 100%;
-    height: 100%; 
-  }
-  .bottom-info{
-    background-image: url("/content/images/home/home-info.jpg");
-    background-size: cover;
-    width: 100%;
     height: 100%;
+    div {
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      width: 75%;
+      h2 {
+        //Title
+        color: #fff;
+        text-transform: uppercase;
+        text-shadow: 6px 5px 9px rgba(10, 10, 10, 0.77);
+        font-weight: 900;
+        margin-top: 0.625rem;
+        text-align: center;
+        margin-bottom: 1.875rem;
+        span {
+          font-weight: 400;
+          letter-spacing: -1px;
+        }
+      }
+      div {
+        //Buttons wrapper
+        position: relative;
+        width: fit-content;
+        width: 270px;
+        .btn-brand {
+          margin-bottom: 1.25rem;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .bottom-info {
+    height: 100%;
+    border-left: 5px solid #fff; 
   }
 }
+
+
+

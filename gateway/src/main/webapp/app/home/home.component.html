@@ -1,4 +1,4 @@
-<div class="home gutter">
+<div class="home">
     <div class="row">
         <div class="col-12">
             <div class="hero home-hero">
@@ -15,15 +15,31 @@
             </div>
         </div>
     </div>
-    <div class="row home-bottom">
-        <div class="col-md-10 col-lg-8">
+    <div class="row home-bottom no-gutters">
+        <div class="col-md-8">
             <div class="bottom-panel">
-                <button class="btn btn-brand">Iniciar <span class="font-weight-bold">sesión</span></button>
-                <button class="btn btn-brand">Iniciar <span class="font-weight-bold">sesión</span></button>
+                <div>
+                    <h2 class="font-brand"><span>Conoce</span> nuestros roles</h2>
+                    <div>
+                        <a class="btn btn-brand"><span class="font-weight-bold">Talento</span> como aliado
+                            estratégico</a>
+                        <a class="btn btn-brand"><span class="font-weight-bold">Líder</span> desarrollador de su
+                            gente</a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-md-2 col-lg-4 info">
-            <div class="bottom-info"></div>
+        <div class="col-md-4">
+            <div class="bottom-info">
+                <ngb-carousel [showNavigationIndicators]="false" class="fit-carousel">
+                    <ng-template ngbSlide>
+                        <img src="/content/images/home/home-info.jpg" alt="Random first slide">
+                    </ng-template>
+                    <ng-template ngbSlide>
+                        <img src="/content/images/home/home-bottom.jpg" alt="Random second slide">
+                    </ng-template>
+                </ngb-carousel>
+            </div>
         </div>
     </div>
 </div>
