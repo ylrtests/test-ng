@@ -1,4 +1,4 @@
-<div class="modal-body container">
+<div class="modal-body container" id="modal-login">
     <div class="row justify-content-center">
         <h1 class="login-title">Talento y gestión</h1>
         <div class="col-md-8">
@@ -21,17 +21,17 @@
                 <div class="form-group">
                     
                     <input type="password" class="form-control" name="password" id="password"
-                        placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" formControlName="password">
+                        placeholder="Contraseña" 
+                        formControlName="password">
                 </div>
 
                 <button type="submit" class="btn btn-brand w-100" >Iniciar <span class="font-weight-bold">sesión</span></button>
 
                 <div class="form-bottom">
                         <div class="form-check d-flex align-items-center">
-                                <label class="form-check-label" for="rememberMe"></label>
-                                <input class="form-check-input" type="checkbox" name="rememberMe" id="rememberMe"
+                                <input class="form-check-input mt-0" type="checkbox" name="rememberMe" id="rememberMe"
                                 formControlName="rememberMe">
-                                <span class="text-brand"><small>Recordarme</small></span>
+                                <label class="form-check-label text-brand" for="rememberMe"><small>Recordarme</small></label>
                             </div>
                             <a class="text-brand text-right" (click)="requestResetPassword()"><small>¿Olvidaste tu contraseña?</small></a>
                 </div>

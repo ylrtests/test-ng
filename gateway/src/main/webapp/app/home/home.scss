@@ -2,22 +2,73 @@
 Main page styles
 ========================================================================== */
 
-.hipster {
-  display: inline-block;
-  width: 347px;
-  height: 497px;
-  background: url('../../content/images/jhipster_family_member_2.svg') no-repeat center top;
-  background-size: contain;
+.home{
+  height: calc(100vh - 45px);
+  display: flex;
+  flex-flow: column;
+  overflow-x: hidden;
 }
 
-/* wait autoprefixer update to allow simple generation of high pixel density media query */
-@media only screen and (-webkit-min-device-pixel-ratio: 2),
-  only screen and (-moz-min-device-pixel-ratio: 2),
-  only screen and (-o-min-device-pixel-ratio: 2/1),
-  only screen and (min-resolution: 192dpi),
-  only screen and (min-resolution: 2dppx) {
-  .hipster {
-    background: url('../../content/images/jhipster_family_member_2.svg') no-repeat center top;
-    background-size: contain;
+.gutter{
+  background-color: grey;
+  padding: 0 90px;
+   /* Fixed gap between navbar and hero component, and side bars.
+     If the gap is not needed anymore, it can be deleted.
+  */
+  margin-top: -20px;
+  margin-right: -35px;
+  margin-left: -35px;
+}
+
+
+.hero {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  height: 380px;
+  border-bottom: 5px solid #fff;
+}
+
+.hero.home-hero {
+  background-image: url("/content/images/home/home-hero.jpg");
+  background-size: cover;
+  justify-content: center;
+
+  div:first-child {
+    position: relative;
+    margin: 0.625rem 0 0 5%;
+    h1 {
+      color: white;
+      text-transform: uppercase;
+      text-shadow: 6px 5px 9px rgba(10, 10, 10, 0.77);
+      font-size: 3.2rem;
+    }
+    button {
+      position: absolute;
+      right: 15%;
+    }
+  }
+
+  .map-container {
+    height: 95%;
+    margin-top: 0.625rem;
+  }
+}
+
+.home-bottom{
+  flex-grow: 1;
+  .bottom-panel{
+    background-image: url("/content/images/home/home-bottom.jpg");
+    background-size: cover;
+    background-position: right;
+    width: 100%;
+    height: 100%; 
+  }
+  .bottom-info{
+    background-image: url("/content/images/home/home-info.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
   }
 }
