@@ -51,6 +51,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy() {
+    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#FFFFFF';
     if (this.authSubscription) {
       this.eventManager.destroy(this.authSubscription);
     }
