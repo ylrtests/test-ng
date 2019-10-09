@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, ElementRef, AfterViewInit, Renderer2 } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { JhiEventManager } from 'ng-jhipster';
@@ -21,7 +21,8 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     private accountService: AccountService,
     private loginModalService: LoginModalService,
     private eventManager: JhiEventManager,
-    private elementRef: ElementRef
+    private elementRef: ElementRef,
+    private renderer2: Renderer2
   ) { }
 
   ngOnInit() {
@@ -32,6 +33,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   }
   ngAfterViewInit() {
     this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#808080';
+    this.elementRef.nativeElement.ownerDocument.querySelector(".jh-card").style.padding = '0';
   }
 
   registerAuthenticationSuccess() {
@@ -51,7 +53,8 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#FFFFFF';
+    this.renderer2.removeAttribute(this.elementRef.nativeElement.ownerDocument.body,'style')
+    this.renderer2.removeAttribute(this.elementRef.nativeElement.ownerDocument.querySelector(".jh-card"),'style')
     if (this.authSubscription) {
       this.eventManager.destroy(this.authSubscription);
     }
