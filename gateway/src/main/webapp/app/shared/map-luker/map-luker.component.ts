@@ -1,4 +1,5 @@
 import { Component, OnInit, ElementRef, AfterViewInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'jhi-map-luker',
@@ -11,7 +12,7 @@ export class MapLukerComponent implements OnInit, AfterViewInit {
   private shadowItems: any;
   private titles: any[];
 
-  constructor(private elem: ElementRef) { }
+  constructor(private elem: ElementRef, private router: Router) { }
 
   ngOnInit() {
   }
@@ -54,5 +55,10 @@ export class MapLukerComponent implements OnInit, AfterViewInit {
         }
       }, 700);
     }, 1000);
+  }
+
+  clickMapItem(link: string){
+    // si ya inicio sesión
+    this.router.navigate([`${link}`]);
   }
 }
