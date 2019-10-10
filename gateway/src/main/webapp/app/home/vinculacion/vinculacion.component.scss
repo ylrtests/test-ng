@@ -1,0 +1,117 @@
+:host {
+  background: #808080;
+}
+
+.hero.vinc-hero {
+  background-image: url("/content/images/vinculacion/vinculacion-hero.jpg");
+  background-size: cover;
+  justify-content: space-evenly;
+  max-height: 415px;
+
+  div:first-child {
+    position: relative;
+    margin: 0.625rem 0 0 2%;
+    h1 {
+      color: #fff;
+      text-transform: uppercase;
+      text-shadow: 6px 5px 9px rgba(10, 10, 10, 0.77);
+      font-size: 2rem;
+      font-weight: 900;
+    }
+    .map-container {
+      z-index: 2;
+      height: 85%;
+      max-width: 438px;
+      max-height: 438px;
+      position: absolute;
+    }
+  }
+
+  .button-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    height: 100%;
+    position: relative;
+
+    .btn-brand {
+      margin-right: 1.25rem;
+    }
+
+    .title-process {
+      position: absolute;
+      bottom: -47px;
+      z-index: 2;
+      width: 100%;
+      h2{
+        font-size: 2.3rem;
+        text-transform: uppercase;
+        font-weight: 900;
+        margin-bottom: 0;
+      }
+      h2:first-child {
+        color: #fff;
+        text-shadow: 6px 5px 9px rgba(10, 10, 10, 0.4);
+        
+      }
+      h2:last-child{
+        color: #0b8c73;
+        float: right; 
+      }
+    }
+  }
+}
+
+.vinc-bottom {
+  background-color: #fff;
+  flex-grow: 1;
+  max-height: 455px;
+
+  .text-process{
+    margin-top: 10%;
+    color: #fff;
+    background-color: #0b8c73;
+    padding: 10px 15% 10px 3%;
+    border-radius: 25px 0 0 25px;
+    width: calc(100% + 1px);
+    position: relative;
+  }
+
+  .text-process::before{
+    content: "";
+    position: absolute;
+    border: 1px solid grey;
+    width: 78%;
+    height: 125%;
+    top: -13px;
+    border-radius: 25px;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero.vinc-hero {
+    justify-content: initial;
+    div:first-child {
+      h1 {
+        font-size: 3.2rem;
+      }
+      .map-container {
+        height: 115%;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+      }
+    }
+
+    .button-wrapper{
+      flex-grow: 1;
+      .title-process {
+        h2:last-child{
+          margin-left: 15%;
+          float: none;
+        }
+      }
+    }
+  }
+}
