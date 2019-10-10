@@ -184,7 +184,7 @@ ui bootstrap tweaks
 /* jhipster-needle-scss-add-main JHipster will add new css style */
 
 .lk-wrapper {
-  height: calc(100vh - 45px);
+  min-height: calc(100vh - 44px);
   display: flex;
   flex-flow: column;
   max-width: 1115px;
@@ -227,7 +227,7 @@ ui bootstrap tweaks
     color: #e1523d;
     box-shadow: -3px 4px 10px rgba(10, 10, 10, 0.4);
     font-size: 11px;
-    left: -25px;
+    left: -28px;
     top: -25px;
 
     img {
@@ -237,19 +237,17 @@ ui bootstrap tweaks
   }
 
   &.filled {
-    padding: 1.5rem 1rem;;
+    padding: 1.5rem 1rem;
     .btn-badge {
       left: -5px;
       top: -30px;
     }
   }
 
-  &.brand-secondary{
+  &.brand-secondary {
     background: rgb(11, 140, 115);
     box-shadow: 0 0 0 1px #0b8c73;
   }
-  
-  
 }
 .btn-brand:hover {
   color: #fff !important;
@@ -259,10 +257,6 @@ ui bootstrap tweaks
   -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
   box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
 }
-
-// .btn-grand.big{
-
-// }
 
 .text-brand {
   color: #e1523d !important;

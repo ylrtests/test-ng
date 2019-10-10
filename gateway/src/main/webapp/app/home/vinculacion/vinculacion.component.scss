@@ -7,6 +7,7 @@
   background-size: cover;
   justify-content: space-evenly;
   max-height: 415px;
+  height: 55vh;
 
   div:first-child {
     position: relative;
@@ -27,7 +28,7 @@
     }
   }
 
-  .button-wrapper {
+  .buttons-top {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -36,14 +37,15 @@
 
     .btn-brand {
       margin-right: 1.25rem;
+      text-transform: uppercase;
     }
 
     .title-process {
       position: absolute;
-      bottom: -47px;
+      bottom: -45px;
       z-index: 2;
       width: 100%;
-      h2{
+      h2 {
         font-size: 2.3rem;
         text-transform: uppercase;
         font-weight: 900;
@@ -52,11 +54,10 @@
       h2:first-child {
         color: #fff;
         text-shadow: 6px 5px 9px rgba(10, 10, 10, 0.4);
-        
       }
-      h2:last-child{
+      h2:last-child {
         color: #0b8c73;
-        float: right; 
+        float: right;
       }
     }
   }
@@ -66,25 +67,73 @@
   background-color: #fff;
   flex-grow: 1;
   max-height: 455px;
+  position: relative;
 
-  .text-process{
-    margin-top: 10%;
-    color: #fff;
-    background-color: #0b8c73;
-    padding: 10px 15% 10px 3%;
-    border-radius: 25px 0 0 25px;
+  .text-process {
     width: calc(100% + 1px);
     position: relative;
+    z-index: 1;
+    margin-top: 8%;
+    margin-bottom: 2.875rem;
+
+    div {
+      color: #fff;
+      background-color: #0b8c73;
+      padding: 10px 15% 10px 3%;
+      border-radius: 25px 0 0 25px;
+    }
   }
 
-  .text-process::before{
+  .text-process::before {
     content: "";
     position: absolute;
-    border: 1px solid grey;
-    width: 78%;
+    border: 1px solid #bfbfbf;
+    width: 80%;
     height: 125%;
-    top: -13px;
+    top: -12%;
     border-radius: 25px;
+    z-index: -1;
+    left: 2.5%;
+  }
+
+  .buttons-bottom {
+    margin-bottom: 20px;
+    width: fit-content;
+    width: -moz-fit-content;
+    display: flex;
+    justify-content: initial;
+    align-items: flex-end;
+
+    div:first-child {
+      text-align: right;
+      margin-right: 5rem;
+      position: relative;
+      h3 {
+        margin: 0;
+        text-transform: uppercase;
+        color: grey;
+        font-size: 1.5rem;
+      }
+      h3:first-child {
+        font-weight: 900;
+      }
+    }
+
+    div:first-child::before {
+      content: "";
+      position: absolute;
+      height: 80%;
+      right: -2.5rem;
+      width: 2px;
+      background-color: #0b8c73;
+      top: 10%;
+    }
+
+    .btn-brand {
+      margin-right: 2rem;
+      text-transform: uppercase;
+      font-size: 0.875rem;
+    }
   }
 }
 
@@ -104,10 +153,10 @@
       }
     }
 
-    .button-wrapper{
+    .buttons-top {
       flex-grow: 1;
       .title-process {
-        h2:last-child{
+        h2:last-child {
           margin-left: 15%;
           float: none;
         }
