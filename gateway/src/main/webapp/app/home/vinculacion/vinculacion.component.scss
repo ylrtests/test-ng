@@ -1,13 +1,18 @@
+@import "src/main/webapp/content/scss/custom-functions";
+@import "src/main/webapp/content/scss/custom-variables";
+
 :host {
   background: #808080;
 }
 
-.hero.vinc-hero {
+#vinculacion .hero.process-hero {
   background-image: url("/content/images/vinculacion/vinculacion-hero.jpg");
-  background-size: cover;
-  justify-content: space-evenly;
   max-height: 415px;
   height: 55vh;
+  
+  @include desktop { //Desktop
+    justify-content: initial;
+  }
 
   div:first-child {
     position: relative;
@@ -18,6 +23,9 @@
       text-shadow: 6px 5px 9px rgba(10, 10, 10, 0.77);
       font-size: 2rem;
       font-weight: 900;
+      @include desktop { //Desktop
+        font-size: 3.2rem;
+      }
     }
     .map-container {
       z-index: 2;
@@ -25,6 +33,13 @@
       max-width: 438px;
       max-height: 438px;
       position: absolute;
+      @include desktop { //Desktop
+        height: 115%;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+      }
     }
   }
 
@@ -34,6 +49,9 @@
     align-items: center;
     height: 100%;
     position: relative;
+    @include desktop { //Desktop
+      flex-grow: 1;
+    }
 
     .btn-brand {
       margin-right: 1.25rem;
@@ -58,12 +76,17 @@
       h2:last-child {
         color: #0b8c73;
         float: right;
+        @include desktop { //Desktop
+          margin-left: 15%;
+          float: none;
+        }
+    
       }
     }
   }
 }
 
-.vinc-bottom {
+#vinculacion .process-bottom {
   background-color: #fff;
   flex-grow: 1;
   max-height: 455px;
@@ -78,7 +101,7 @@
 
     div {
       color: #fff;
-      background-color: #0b8c73;
+      background-color: color(secondary);
       padding: 10px 15% 10px 3%;
       border-radius: 25px 0 0 25px;
     }
@@ -133,34 +156,6 @@
       margin-right: 2rem;
       text-transform: uppercase;
       font-size: 0.875rem;
-    }
-  }
-}
-
-@media (min-width: 992px) {
-  .hero.vinc-hero {
-    justify-content: initial;
-    div:first-child {
-      h1 {
-        font-size: 3.2rem;
-      }
-      .map-container {
-        height: 115%;
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
-      }
-    }
-
-    .buttons-top {
-      flex-grow: 1;
-      .title-process {
-        h2:last-child {
-          margin-left: 15%;
-          float: none;
-        }
-      }
     }
   }
 }

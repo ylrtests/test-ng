@@ -1,0 +1,12 @@
+$font-brand: "Kanit", sans-serif;
+$tablet: 768px;
+$desktop: 992px;
+
+$colors: (
+  primary: #e1523d,
+  primary-light: lighten(#e1523d, 20%),
+  primary-dark: darken(#e1523d, 20%),
+  secondary: #0b8c73,
+  secondary-light: lighten(#0b8c73, 20%),
+  secondary-dark: darken(#0b8c73, 20%),
+);
