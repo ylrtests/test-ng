@@ -6,13 +6,17 @@ Main page styles
 @import "src/main/webapp/content/scss/custom-variables";
 
 :host {
-// Cambia color de fondo del: card y jh-card, contenedores de la plataforma.
+  // Cambia color de fondo del: card y jh-card, contenedores de la plataforma.
   background: #808080;
 }
 
 .hero.home-hero {
   background-image: url("/content/images/home/home-hero.jpg");
   justify-content: center;
+  height: 90vh;
+  @include desktop {
+    height: 60vh;
+  }
 
   div:first-child {
     position: relative;
@@ -89,9 +93,6 @@ Main page styles
   }
   .bottom-info {
     height: 100%;
-    border-left: 4px solid #fff; 
+    border-left: 4px solid #fff;
   }
 }
-
-
-

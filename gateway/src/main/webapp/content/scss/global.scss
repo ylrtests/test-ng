@@ -191,7 +191,7 @@ Custom styles
   display: flex;
   flex-flow: column;
   margin: -20px auto 0;
-  min-height: calc(100vh - 44px);
+  min-height: calc(101vh - 44px);
   max-width: 1115px;
   background-color: #808080;
 
@@ -204,10 +204,6 @@ Custom styles
     width: 100%;
     max-height: 535px;
     border-bottom: 4px solid #fff;
-    height: 90vh;
-    @include desktop {
-      height: 60vh;
-    }
   }
 }
 

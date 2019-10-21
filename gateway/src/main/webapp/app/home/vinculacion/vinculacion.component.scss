@@ -7,17 +7,19 @@
 
 #vinculacion .hero.process-hero {
   background-image: url("/content/images/vinculacion/vinculacion-hero.jpg");
-  max-height: 415px;
-  height: 55vh;
 
+  @include tablet {
+    height: 55vh;
+    max-height: 415px;
+  }
   @include desktop {
-    //Desktop
     justify-content: initial;
   }
 
   div:first-child {
     position: relative;
     margin: 0.625rem 0 0 2%;
+    text-align: center;
     h1 {
       color: #fff;
       text-transform: uppercase;
@@ -25,18 +27,19 @@
       font-size: 2rem;
       font-weight: 900;
       @include desktop {
-        //Desktop
         font-size: 3.2rem;
       }
     }
     .map-container {
       z-index: 2;
-      height: 85%;
+      height: 75%;
       max-width: 438px;
       max-height: 438px;
-      position: absolute;
+      @include tablet {
+        height: 85%;
+        position: absolute;
+      }
       @include desktop {
-        //Desktop
         height: 115%;
         margin-left: auto;
         margin-right: auto;
@@ -53,7 +56,6 @@
     height: 100%;
     position: relative;
     @include desktop {
-      //Desktop
       flex-grow: 1;
     }
 
@@ -63,10 +65,12 @@
     }
 
     .title-process {
-      position: absolute;
-      bottom: -45px;
       z-index: 2;
       width: 100%;
+      @include tablet {
+        bottom: -45px;
+        position: absolute;
+      }
       h2 {
         font-size: 2.3rem;
         text-transform: uppercase;
@@ -81,7 +85,6 @@
         color: #0b8c73;
         float: right;
         @include desktop {
-          //Desktop
           margin-left: 15%;
           float: none;
         }
@@ -130,6 +133,13 @@
     display: flex;
     justify-content: initial;
     align-items: flex-end;
+    flex-flow: column nowrap;
+    margin: 0 auto 10px;
+
+    @include tablet {
+      flex-flow: row nowrap;
+      margin: 0 0 10px 0;
+    }
 
     div:first-child {
       text-align: right;
@@ -158,6 +168,7 @@
 
     .btn-brand {
       margin-right: 2rem;
+      margin-top: 30px;
       text-transform: uppercase;
       font-size: 0.875rem;
     }
