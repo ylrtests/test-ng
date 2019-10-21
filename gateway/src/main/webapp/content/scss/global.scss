@@ -202,9 +202,12 @@ Custom styles
     flex-flow: row wrap;
     background-size: cover;
     width: 100%;
-    height: 60vh;
     max-height: 535px;
     border-bottom: 4px solid #fff;
+    height: 90vh;
+    @include desktop {
+      height: 60vh;
+    }
   }
 }
 

@@ -1,8 +1,12 @@
 /* ==========================================================================
 Main page styles
 ========================================================================== */
-// Cambia color de fondo del: card y jh-card, contenedores de la plataforma.
+
+@import "src/main/webapp/content/scss/custom-functions";
+@import "src/main/webapp/content/scss/custom-variables";
+
 :host {
+// Cambia color de fondo del: card y jh-card, contenedores de la plataforma.
   background: #808080;
 }
 
@@ -12,6 +16,8 @@ Main page styles
 
   div:first-child {
     position: relative;
+    height: fit-content;
+    height: -moz-fit-content;
     margin: 0.625rem 0 0 5%;
     h1 {
       color: #fff;
@@ -21,15 +27,23 @@ Main page styles
       font-weight: 900;
     }
     button {
-      position: absolute;
-      right: 15%;
+      @include tablet {
+        position: absolute;
+        right: 15%;
+      }
     }
   }
 
   .map-container {
-    height: 95%;
+    height: 50%;
     margin-top: 0.625rem;
     margin-right: 0.625rem;
+    @include tablet {
+      height: 70%;
+    }
+    @include desktop {
+      height: 95%;
+    }
   }
 }
 

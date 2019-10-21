@@ -9,8 +9,9 @@
   background-image: url("/content/images/vinculacion/vinculacion-hero.jpg");
   max-height: 415px;
   height: 55vh;
-  
-  @include desktop { //Desktop
+
+  @include desktop {
+    //Desktop
     justify-content: initial;
   }
 
@@ -23,7 +24,8 @@
       text-shadow: 6px 5px 9px rgba(10, 10, 10, 0.77);
       font-size: 2rem;
       font-weight: 900;
-      @include desktop { //Desktop
+      @include desktop {
+        //Desktop
         font-size: 3.2rem;
       }
     }
@@ -33,7 +35,8 @@
       max-width: 438px;
       max-height: 438px;
       position: absolute;
-      @include desktop { //Desktop
+      @include desktop {
+        //Desktop
         height: 115%;
         margin-left: auto;
         margin-right: auto;
@@ -49,7 +52,8 @@
     align-items: center;
     height: 100%;
     position: relative;
-    @include desktop { //Desktop
+    @include desktop {
+      //Desktop
       flex-grow: 1;
     }
 
@@ -76,11 +80,11 @@
       h2:last-child {
         color: #0b8c73;
         float: right;
-        @include desktop { //Desktop
+        @include desktop {
+          //Desktop
           margin-left: 15%;
           float: none;
         }
-    
       }
     }
   }

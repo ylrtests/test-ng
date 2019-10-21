@@ -5,13 +5,13 @@
 }
 
 // Mixin
-@mixin desktop {
+@mixin desktop { //Styles for desktop value and above
   @media (min-width: #{$desktop}) {
     @content;
   }
 }
 
-@mixin tablet {
+@mixin tablet { //Styles for tablet value and above
   @media (min-width: #{$tablet}) {
     @content;
   }
