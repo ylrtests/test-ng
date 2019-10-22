@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ElementRef, AfterViewInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,6 +11,7 @@ export class MapLukerComponent implements OnInit, AfterViewInit {
   private logoBrand: any;
   private shadowItems: any;
   private titles: any[];
+  @Input() activeElement?= 0;
 
   constructor(private elem: ElementRef, private router: Router) { }
 
@@ -46,7 +47,17 @@ export class MapLukerComponent implements OnInit, AfterViewInit {
       let i = 0;
       setInterval(() => {
         if (i < this.mapElements.length) {
-          this.mapElements[i].style.opacity = 1
+          // Existe elemento activo
+          if (this.activeElement > 0) {
+            if ((this.activeElement - 1) === i) {
+              this.mapElements[i].classList.add("active")
+            }
+            else {
+              this.mapElements[i].classList.add("opaque")
+            }
+          }
+
+          this.mapElements[i].classList.add("animated")
           i++;
         }
         else {
@@ -57,7 +68,7 @@ export class MapLukerComponent implements OnInit, AfterViewInit {
     }, 1000);
   }
 
-  clickMapItem(link: string){
+  clickMapItem(link: string) {
     // si ya inicio sesión
     this.router.navigate([`${link}`]);
   }

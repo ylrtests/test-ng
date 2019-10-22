@@ -5,7 +5,7 @@
                 <div>
                     <h1 class="font-brand">Talento & gestión</h1>
                     <div class="map-container">
-                        <jhi-map-luker></jhi-map-luker>
+                        <jhi-map-luker [activeElement] = "3"></jhi-map-luker>
                     </div>
                 </div>
                 <div class="buttons-top">
@@ -71,7 +71,7 @@
         <div class="toolbox-content">
             <div class="toolbox-column">
                 <h2>Formatos<br />para descargar</h2>
-                <a *ngFor = "let item of modalElements.first"  href="" class="btn-modal">{{item.title}}</a>
+                <a *ngFor = "let item of modalElements.first"  href="{{item.url}}" class="btn-modal">{{item.title}}</a>
             </div>
 
             <div class="toolbox-column">
