@@ -8,6 +8,19 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class VinculacionComponent implements OnInit, AfterViewInit, OnDestroy {
 
+  modalElements = {
+    first: [
+      { title: 'Descripción de cargo', url: 'www.google.com' },
+      { title: 'Ficha de selección', url: 'www.google.com' },
+      { title: 'Formato de entrevista', url: 'www.google.com' },
+    ],
+    second:[
+      { title: 'Matriz de entrenamiento', url: 'www.google.com' },
+      { title: 'Verificación del proceso', url: 'www.google.com' },
+      { title: 'Encuesta de satisfacción', url: 'www.google.com' },
+    ]
+  }
+
   constructor(private elementRef: ElementRef, private renderer2: Renderer2, private modalService: NgbModal) { }
 
   ngOnInit() {
@@ -19,12 +32,12 @@ export class VinculacionComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.renderer2.removeAttribute(this.elementRef.nativeElement.ownerDocument.body,'style')
-    this.renderer2.removeAttribute(this.elementRef.nativeElement.ownerDocument.querySelector(".jh-card"),'style')
+    this.renderer2.removeAttribute(this.elementRef.nativeElement.ownerDocument.body, 'style')
+    this.renderer2.removeAttribute(this.elementRef.nativeElement.ownerDocument.querySelector(".jh-card"), 'style')
   }
 
   open(modalTools) {
-    this.modalService.open(modalTools, { windowClass: 'toolbox'});
+    this.modalService.open(modalTools, { windowClass: 'toolbox' });
   }
 
 }

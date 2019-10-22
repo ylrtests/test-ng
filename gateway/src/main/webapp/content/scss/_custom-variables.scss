@@ -10,3 +10,8 @@ $colors: (
   secondary-dark: #085b4b,
   secondary-light: #0c9279,
 );
+
+// To convert from hex to filter: https://codepen.io/sosuke/pen/Pjoqqp
+$filters: (
+  secondary: invert(40%) sepia(62%) saturate(554%) hue-rotate(118deg) brightness(96%) contrast(97%)
+)

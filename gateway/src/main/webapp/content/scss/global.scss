@@ -261,8 +261,33 @@ Custom styles
   }
 }
 
+.btn-modal {
+  border-radius: 25px;
+  position: relative;
+  background: #fff !important;
+  transition: all 0.3s ease 0s;
+  width: 90%;
+  margin: 5px auto;
+  padding: 5px 15px;
+  text-decoration: none;
+  font-weight: 600;
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    text-decoration: none;
+    font-weight: 600;
+  }
+}
+
 .text-brand {
   color: color(primary) !important;
+}
+
+.icon {
+  &.secondary {
+    filter: colorFilter(secondary);
+  }
 }
 
 .carousel-item {

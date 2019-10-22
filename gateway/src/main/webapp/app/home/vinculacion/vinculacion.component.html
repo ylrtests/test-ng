@@ -31,9 +31,10 @@
         <div class="col-lg-7">
             <div class="text-process">
                 <div>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et reprehenderit hic tenetur suscipit
-                    aliquam ullam temporibus nulla id, eligendi atque corrupti ipsam quos. Dolores sequi natus
-                    aspernatur fugit molestiae sint!
+                    Garantizamos que la organización cuente con el <span class="font-weight-bold">Talento</span>
+                    requerido para el momento <span class="font-weight-bold">actual y futuro</span> y que su <span
+                        class="font-weight-bold">proceso de INTEGRACIÓN</span> a la organización potencialice su
+                    productividad y retención.
                 </div>
             </div>
             <div class="buttons-bottom">
@@ -43,7 +44,7 @@
                 </div>
                 <a class="btn btn-brand brand-secondary" (click)="open(modalTools)">
                     <span class="font-weight-bold">Caja de herramientas</span>
-                    <span class="btn-badge"><img src="/content/icons/tool.svg" alt=""></span>
+                    <span class="btn-badge"><img src="/content/icons/tool.svg" alt="" class="icon secondary"></span>
                 </a>
                 <a class="btn btn-brand brand-secondary">
                     <span class="font-weight-bold">Definiciones</span>
@@ -54,13 +55,10 @@
     </div>
 </div>
 
-
 <ng-template #modalTools let-c="close">
     <div class="modal-header">
-        <div class="header-gap">
-            <button type="button" aria-label="Close" (click)="c('Cross click')">
-                <span aria-hidden="true">&times;</span>
-            </button>
+        <div class="header-top">
+            <img src="/content/images/close.png" alt="Cerrar" (click)="c('Cross click')">
         </div>
         <div class="header-logo">
             <div class="header-line"></div>
@@ -73,22 +71,19 @@
         <div class="toolbox-content">
             <div class="toolbox-column">
                 <h2>Formatos<br />para descargar</h2>
-                <a href="" class="btn-modal">Placeholder</a>
-                <a href="" class="btn-modal">Placeholder</a>
-                <a href="" class="btn-modal">Placeholder</a>
+                <a *ngFor = "let item of modalElements.first"  href="" class="btn-modal">{{item.title}}</a>
             </div>
 
             <div class="toolbox-column">
                 <h2>Formatos<br />para descargar</h2>
-                <a href="" class="btn-modal">Placeholder</a>
-                <a href="" class="btn-modal">Placeholder</a>
-                <a href="" class="btn-modal">Placeholder</a>
+                <a *ngFor = "let item of modalElements.second"  href="{{item.url}}" class="btn-modal">{{item.title}}</a>
             </div>
         </div>
 
         <div class="toolbox-footer">
             <h2 class="font-brand">Vinculación e integración</h2>
-            <div><img src="/content/icons/tool.svg" alt=""></div>
+            <div><img src="/content/icons/tool.svg" alt="" class="icon secondary"></div>
         </div>
     </div>
 </ng-template>
+

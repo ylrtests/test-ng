@@ -5,11 +5,22 @@
   padding: 0;
   flex-flow: column nowrap;
   border-bottom: 0;
-  .header-gap {
+  .header-top {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     width: 100%;
     background-color: color(primary);
     height: 35px;
     margin-bottom: 0.5rem;
+
+    img {
+      height: 65%;
+      width: 25px;
+      margin-right: 1rem;
+      cursor: pointer;
+    }
   }
 
   .header-logo {
@@ -56,11 +67,11 @@
       display: flex;
       flex-flow: column nowrap;
       align-items: center;
-      padding: 20px;
+      padding: 15px;
       width: 48%;
 
       h2:first-child {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         text-align: center;
         font-weight: 600;
         text-transform: uppercase;
@@ -89,7 +100,7 @@
     margin-bottom: 60px;
     padding-bottom: 5px;
     h2:first-child {
-      font-size: 1.5rem;
+      font-size: 2.3rem;
       text-align: center;
       font-weight: 600;
       text-transform: uppercase;
@@ -131,12 +142,5 @@
 }
 
 .btn-modal {
-  border-radius: 25px;
-  position: relative;
-  background: #fff !important;
   color: color(secondary);
-  transition: all 0.3s ease 0s;
-  width: 90%;
-  margin: 5px auto;
-  padding: 5px 15px;
 }

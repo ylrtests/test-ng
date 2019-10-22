@@ -4,6 +4,10 @@
   @return map-get($colors, $color-name);
 }
 
+@function colorFilter($filter-name) {
+  @return map-get($filters, $filter-name);
+}
+
 // Mixin
 @mixin desktop { //Styles for desktop value and above
   @media (min-width: #{$desktop}) {
