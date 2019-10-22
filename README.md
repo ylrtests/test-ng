@@ -1,1 +1,1 @@
-# jhipster-test-ng
+# test-ng
