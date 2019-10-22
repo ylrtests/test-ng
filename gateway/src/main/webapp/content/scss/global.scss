@@ -285,6 +285,10 @@ Custom styles
 }
 
 .icon {
+  &.primary {
+    filter: colorFilter(primary);
+  }
+
   &.secondary {
     filter: colorFilter(secondary);
   }

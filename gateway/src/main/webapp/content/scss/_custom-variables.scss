@@ -13,5 +13,6 @@ $colors: (
 
 // To convert from hex to filter: https://codepen.io/sosuke/pen/Pjoqqp
 $filters: (
+  primary: invert(41%) sepia(87%) saturate(1507%) hue-rotate(343deg) brightness(96%) contrast(90%),
   secondary: invert(40%) sepia(62%) saturate(554%) hue-rotate(118deg) brightness(96%) contrast(97%)
 )

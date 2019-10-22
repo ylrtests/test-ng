@@ -7,7 +7,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./vinculacion.component.scss', './vinculacion-tools.component.scss']
 })
 export class VinculacionComponent implements OnInit, AfterViewInit, OnDestroy {
-
+ 
   modalElements = {
     first: [
       { title: 'Descripción de cargo', url: 'www.google.com' },
@@ -34,6 +34,7 @@ export class VinculacionComponent implements OnInit, AfterViewInit, OnDestroy {
   ngOnDestroy() {
     this.renderer2.removeAttribute(this.elementRef.nativeElement.ownerDocument.body, 'style')
     this.renderer2.removeAttribute(this.elementRef.nativeElement.ownerDocument.querySelector(".jh-card"), 'style')
+    this.modalService.dismissAll();
   }
 
   open(modalTools) {
