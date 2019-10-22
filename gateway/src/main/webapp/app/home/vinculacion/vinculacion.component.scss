@@ -112,18 +112,18 @@
       padding: 10px 15% 10px 3%;
       border-radius: 25px 0 0 25px;
     }
-  }
 
-  .text-process::before {
-    content: "";
-    position: absolute;
-    border: 1px solid #bfbfbf;
-    width: 80%;
-    height: 125%;
-    top: -12%;
-    border-radius: 25px;
-    z-index: -1;
-    left: 2.5%;
+    &:before {
+      content: "";
+      position: absolute;
+      border: 1px solid #bfbfbf;
+      width: 80%;
+      height: 125%;
+      top: -12%;
+      border-radius: 25px;
+      z-index: -1;
+      left: 2.5%;
+    }
   }
 
   .buttons-bottom {
@@ -154,16 +154,16 @@
       h3:first-child {
         font-weight: 900;
       }
-    }
 
-    div:first-child::before {
-      content: "";
-      position: absolute;
-      height: 80%;
-      right: -2.5rem;
-      width: 2px;
-      background-color: #0b8c73;
-      top: 10%;
+      &:before {
+        content: "";
+        position: absolute;
+        height: 80%;
+        right: -2.5rem;
+        width: 2px;
+        background-color: #0b8c73;
+        top: 10%;
+      }
     }
 
     .btn-brand {

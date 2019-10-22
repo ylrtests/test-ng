@@ -291,3 +291,12 @@ Custom styles
     }
   }
 }
+
+.toolbox .modal-dialog {
+  @include tablet {
+    max-width: 700px;
+  }
+  .modal-content {
+    border: none;
+  }
+}

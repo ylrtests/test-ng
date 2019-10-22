@@ -4,9 +4,9 @@ $desktop: 992px;
 
 $colors: (
   primary: #e1523d,
-  primary-light: lighten(#e1523d, 20%),
-  primary-dark: darken(#e1523d, 20%),
+  primary-light: lighten(#e1523d, 10%),
+  primary-dark: darken(#e1523d, 10%),
   secondary: #0b8c73,
-  secondary-light: lighten(#0b8c73, 20%),
-  secondary-dark: darken(#0b8c73, 20%),
+  secondary-dark: #085b4b,
+  secondary-light: #0c9279,
 );

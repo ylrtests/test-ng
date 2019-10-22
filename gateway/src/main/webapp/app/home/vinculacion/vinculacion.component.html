@@ -37,8 +37,11 @@
                 </div>
             </div>
             <div class="buttons-bottom">
-                <div><h3>Conoce</h3><h3>Más</h3></div>
-                <a class="btn btn-brand brand-secondary">
+                <div>
+                    <h3>Conoce</h3>
+                    <h3>Más</h3>
+                </div>
+                <a class="btn btn-brand brand-secondary" (click)="open(modalTools)">
                     <span class="font-weight-bold">Caja de herramientas</span>
                     <span class="btn-badge"><img src="/content/icons/tool.svg" alt=""></span>
                 </a>
@@ -50,3 +53,42 @@
         </div>
     </div>
 </div>
+
+
+<ng-template #modalTools let-c="close">
+    <div class="modal-header">
+        <div class="header-gap">
+            <button type="button" aria-label="Close" (click)="c('Cross click')">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="header-logo">
+            <div class="header-line"></div>
+            <img src="/content/logo.svg" class="logo" alt="logo">
+            <div class="header-line"></div>
+        </div>
+    </div>
+    <div class="modal-body">
+        <h1>Caja de herramientas</h1>
+        <div class="toolbox-content">
+            <div class="toolbox-column">
+                <h2>Formatos<br />para descargar</h2>
+                <a href="" class="btn-modal">Placeholder</a>
+                <a href="" class="btn-modal">Placeholder</a>
+                <a href="" class="btn-modal">Placeholder</a>
+            </div>
+
+            <div class="toolbox-column">
+                <h2>Formatos<br />para descargar</h2>
+                <a href="" class="btn-modal">Placeholder</a>
+                <a href="" class="btn-modal">Placeholder</a>
+                <a href="" class="btn-modal">Placeholder</a>
+            </div>
+        </div>
+
+        <div class="toolbox-footer">
+            <h2 class="font-brand">Vinculación e integración</h2>
+            <div><img src="/content/icons/tool.svg" alt=""></div>
+        </div>
+    </div>
+</ng-template>
