@@ -1,4 +1,4 @@
-import { Component, OnInit, Renderer2, ElementRef, AfterViewInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -6,7 +6,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
   templateUrl: './vinculacion-integracion.component.html',
   styleUrls: ['./vinculacion-integracion.component.scss', './vinculacion-integracion-tools.component.scss']
 })
-export class VinculacionIntegracionComponent implements OnInit, AfterViewInit, OnDestroy {
+export class VinculacionIntegracionComponent implements OnInit, OnDestroy {
  
   modalElements = {
     first: [
@@ -21,19 +21,13 @@ export class VinculacionIntegracionComponent implements OnInit, AfterViewInit, O
     ]
   }
 
-  constructor(private elementRef: ElementRef, private renderer2: Renderer2, private modalService: NgbModal) { }
+  constructor(private modalService: NgbModal) { }
 
   ngOnInit() {
   }
 
-  ngAfterViewInit() {
-    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#808080';
-    this.elementRef.nativeElement.ownerDocument.querySelector(".jh-card").style.padding = '0';
-  }
 
   ngOnDestroy() {
-    this.renderer2.removeAttribute(this.elementRef.nativeElement.ownerDocument.body, 'style')
-    this.renderer2.removeAttribute(this.elementRef.nativeElement.ownerDocument.querySelector(".jh-card"), 'style')
     this.modalService.dismissAll();
   }
 

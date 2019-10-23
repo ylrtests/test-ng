@@ -1,0 +1,50 @@
+@import "src/main/webapp/content/scss/custom-functions";
+@import "src/main/webapp/content/scss/custom-variables";
+
+#definiciones .hero.definicion-hero {
+  background-image: url("/content/images/definicion-hero.jpg");
+
+  @include tablet {
+    height: 45vh;
+    max-height: 350px;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  div:first-child {
+    @include tablet {
+      margin-right: 1rem;
+    }
+
+    .btn-brand {
+      width: 90%;
+      text-transform: uppercase;
+      margin: 0 auto 1rem;
+      font-size: 2rem;
+      padding: 0;
+      line-height: 1.2;
+      display: block;
+
+      .btn-badge {
+        width: 70px;
+        height: 70px;
+        left: -28px;
+        top: -16px;
+
+        img {
+          width: 50px;
+          height: 50px;
+        }
+      }
+      &:hover {
+        transform: none;
+      }
+    }
+    h1:first-of-type {
+      font-size: 2rem;
+      text-transform: uppercase;
+      color: #fff;
+      font-weight: 900;
+    }
+  }
+}

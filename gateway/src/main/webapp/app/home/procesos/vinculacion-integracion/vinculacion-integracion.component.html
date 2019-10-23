@@ -42,7 +42,8 @@
                     <h3>Conoce</h3>
                     <h3>Más</h3>
                 </div>
-                <a class="btn btn-brand brand-secondary" (click)="open(modalTools)">
+                <a class="btn btn-brand brand-secondary" >
+                    <!-- (click)="open(modalTools)" -->
                     <span class="font-weight-bold">Caja de herramientas</span>
                     <span class="btn-badge"><img src="/content/icons/tool.svg" alt="" class="icon secondary"></span>
                 </a>
@@ -55,6 +56,7 @@
     </div>
 </div>
 
+<!-- Modal Caja de Herramientas -->
 <ng-template #modalTools let-c="close">
     <div class="modal-header">
         <div class="header-top">

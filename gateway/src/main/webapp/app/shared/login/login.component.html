@@ -14,25 +14,26 @@
         <div class="col-md-8">
             <form class="form" role="form" (ngSubmit)="login()" [formGroup]="loginForm">
                 <div class="form-group">
-                    
-                    <input type="text" class="form-control" name="username" id="username"
-                        placeholder="Usuario" formControlName="username">
+
+                    <input type="text" class="form-control" name="username" id="username" placeholder="Usuario"
+                        formControlName="username">
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" name="password" id="password"
-                        placeholder="Contraseña" 
+                    <input type="password" class="form-control" name="password" id="password" placeholder="Contraseña"
                         formControlName="password">
                 </div>
 
-                <button type="submit" class="btn btn-brand w-100" >Iniciar <span class="font-weight-bold">sesión</span></button>
+                <button type="submit" class="btn btn-brand w-100">Iniciar <span
+                        class="font-weight-bold">sesión</span></button>
 
                 <div class="form-bottom">
-                        <div class="form-check d-flex align-items-center">
-                                <input class="form-check-input mt-0" type="checkbox" name="rememberMe" id="rememberMe"
-                                formControlName="rememberMe">
-                                <label class="form-check-label text-brand" for="rememberMe"><small>Recordarme</small></label>
-                            </div>
-                            <a class="text-brand text-right" (click)="requestResetPassword()"><small>¿Olvidaste tu contraseña?</small></a>
+                    <div class="form-check d-flex align-items-center">
+                        <input class="form-check-input mt-0" type="checkbox" name="rememberMe" id="rememberMe"
+                            formControlName="rememberMe">
+                        <label class="form-check-label text-brand" for="rememberMe"><small>Recordarme</small></label>
+                    </div>
+                    <a class="text-brand text-right" (click)="requestResetPassword()"><small>¿Olvidaste tu
+                            contraseña?</small></a>
                 </div>
             </form>
         </div>
