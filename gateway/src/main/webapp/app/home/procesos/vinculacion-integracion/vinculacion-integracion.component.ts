@@ -2,11 +2,11 @@ import { Component, OnInit, Renderer2, ElementRef, AfterViewInit, OnDestroy } fr
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-  selector: 'jhi-vinculacion',
-  templateUrl: './vinculacion.component.html',
-  styleUrls: ['./vinculacion.component.scss', './vinculacion-tools.component.scss']
+  selector: 'jhi-vinculacion-integracion',
+  templateUrl: './vinculacion-integracion.component.html',
+  styleUrls: ['./vinculacion-integracion.component.scss', './vinculacion-integracion-tools.component.scss']
 })
-export class VinculacionComponent implements OnInit, AfterViewInit, OnDestroy {
+export class VinculacionIntegracionComponent implements OnInit, AfterViewInit, OnDestroy {
  
   modalElements = {
     first: [
